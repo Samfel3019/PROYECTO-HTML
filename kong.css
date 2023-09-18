@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Bungee+Shade&family=Skranji&display=swap');
+@import url('https://fonts.cdnfonts.com/css/algeria');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Bungee+Shade&family=Nosifer&family=Rampart+One&family=Skranji&family=Train+One&display=swap');
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body {
+    background-image: url(material/photo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+li {
+    cursor: pointer;
+}
+ul:hover > li a:is(:hover){
+    transform: scale(1.15) translateZ(0);
+    color: rgb(232, 177, 76);
+}
+ul:hover > li:not(:hover){
+    transform:scale(.9);
+    filter: blur(5px);
+}
+#titulo {
+    top: 0px;
+    background-image:url(photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    font-size: 7vh;
+    font-weight: bolder;
+    font-family:'Train One', cursive;
+    text-align: center;
+    }
+#letras {
+    color:black;
+    background: linear-gradient(90deg, rgba(230,11,11,1) 10%, rgba(230,11,11,1) 10%, rgba(255,188,95,1) 50%, rgba(252,176,69,1) 100%);
+}
+#contenedor {
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: grid; 
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "lo li li li li li li li li logo";
+}
+#contenedor-logo {
+    grid-area: lo;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedor-logo2{
+    grid-area: logo;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedor-lista {
+    grid-area: li;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+#lista {
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Monoton', cursive;
+    color: white;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px;
+    font-size: 25px;
+    list-style: none;
+}
+li {
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+.container-info{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:azure;
+}
+.info {
+    padding: 20px;
+    border: 10px dashed rgb(210, 166, 252);
+    font-family: 'Monoton', cursive;
+    font-size: xx-large;
+    color: rgb(210, 166, 252);
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 39rem;
+    box-shadow: 0 0 1rem 0 rgba(255,255,255,.2);
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.15);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+.info-p {
+    margin-top: 10px;
+    color: azure;
+    font-family: 'Skranji', cursive;
+}
+a {
+    color: white;
+    font-family: 'Monoton', cursive;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-burger {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+.contenedor-burger > span{
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    color: white;
+    font-family: 'Monoton', cursive;
+    animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow
+{
+    0%,100%
+    {
+        color: white;
+        text-shadow: 0 0 12px yellow, 0 0 100px yellow;
+    }
+    10%, 90%{
+        color: grey;
+        text-shadow: none;
+    }
+}
+
+.container-burger > span:nth-child(2)
+{
+    animation-delay: 0.25s;
+}
+.container-burger > span:nth-child(3)
+{
+    animation-delay: 0.5s;
+}
+.container-burger > span:nth-child(4)
+{
+    animation-delay: 0.75s;
+}
+.container-burger > span:nth-child(5)
+{
+    animation-delay: 1s;
+}
+.container-burger > span:nth-child(6)
+{
+    animation-delay: 1.25s;
+}
+.container-burger > span:nth-child(7)
+{
+    animation-delay: 1.5s;
+}
+#todas-hamburguesas {
+    text-align: center;
+}
+.tetris {
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}
+.imagen-tetris {
+    width: 650px;
+    height: 500px;
+    margin: 90px;
+    border-radius: 20%;
+    filter: drop-shadow(15px 15px 10px rgb(232, 177, 76));
+    display: flex;
+}
+.tetris-texto {
+    font-family: 'Monoton', cursive;
+    font-size: 75px;
+    color: white;
+    margin: 100px;
+    text-align: center;
+}
+footer{
+    background-color:black;
+    padding: 2rem 0;
+    justify-content: space-between;
+    align-items: center; 
+    display: flex;
+}
+a{
+    text-decoration: none;
+    font-family: 'Monoton', cursive;
+    font-size: x-large;
+    margin-left: 5%;
+    cursor: pointer;
+}
+.links{
+    width: 20%;
+    margin-left: 0%;
+}
+.texto-footer{
+    color: azure;
+    font-family: 'Skranji', cursive;
+    font-size: large;
+    text-align:right;
+    margin-right: 15%;
+}
+.copyright{
+    width: 50%;
+}
+div:hover > a:is(:hover){
+    transform: scale(1.15) translateZ(0);
+    color: rgb(232, 177, 76);
+}
+div:hover > a:not(:hover){
+    transform:scale(.9);
+    filter: blur(5px);
+}
